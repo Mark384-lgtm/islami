@@ -29,6 +29,7 @@
             <TextView
                 android:id="@+id/hadithcontent"
                 android:layout_width="match_parent"
+                style="@style/verses_style"
                 android:layout_height="match_parent" />
         </ScrollView>
     </androidx.cardview.widget.CardView>
