@@ -16,9 +16,6 @@
             android:name=".UI.HadithDetails.HadithDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".UI.HadithDetails.HadithContent"
-            android:exported="false" />
-        <activity
             android:name=".UI.ChapterDetails.ChapterDetailsActivity"
             android:exported="false" />
         <activity
