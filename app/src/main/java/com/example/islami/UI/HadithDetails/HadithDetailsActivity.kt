@@ -23,11 +23,18 @@ class HadithDetailsActivity : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             hadeth = intent.getParcelableExtra(Extra_hadithDetails, HadethDataClass::class.java)
         }
-
-
+        title = null
+        setSupportActionBar(binding.toolbarActivityhadith)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
     }
 
     companion object {
         val Extra_hadithDetails = "hadith content"
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }
