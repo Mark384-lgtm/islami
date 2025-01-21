@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.islami.UI.HadithDetails.HadithDetailsActivity
 import com.example.islami.databinding.FragmnetHadithBinding
 
 class HadithFragment : Fragment() {
