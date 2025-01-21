@@ -1,4 +1,4 @@
-package com.example.islami.UI.SuraVerses
+package com.example.islami.UI.ChapterDetails
 
 import android.os.Bundle
 import android.util.Log
@@ -8,7 +8,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.RecyclerView
 import com.example.islami.R
 
-class SuraContent : AppCompatActivity() {
+class ChapterDetailsActivity : AppCompatActivity() {
 
     lateinit var SuraTitle: String
     var SuraPosition: Int = -1
@@ -20,7 +20,7 @@ class SuraContent : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sura)
+        setContentView(R.layout.activity_chapter_details)
         initattributes()
         bindtitle()
         showBackbutton()
@@ -30,9 +30,9 @@ class SuraContent : AppCompatActivity() {
     private fun readSuraVerses(): MutableList<String> {
         val sura = assets.open("${SuraPosition + 1}.txt").bufferedReader(Charsets.UTF_8)
             .use { it.readText() }
-        val suraContent =
-            if (sura.startsWith("\uFEFF")) sura.substring(1) else sura  // Remove BOM if present
-        val verses = suraContent.split('\n')
+        Log.e("suraType", sura::class.simpleName ?: "unknown")
+        val verses = sura.split('\n')
+        Log.e("splitType", verses::class.simpleName ?: "unknown")
         Log.e("ArabicText", verses.toString())
         return verses.toMutableList()
     }
@@ -40,8 +40,8 @@ class SuraContent : AppCompatActivity() {
     private fun showBackbutton() {
         setSupportActionBar(toolbar)
         title = null
-        supportActionBar?.setDisplayHomeAsUpEnabled(true);
-        supportActionBar?.setDisplayShowHomeEnabled(true);
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -68,4 +68,5 @@ class SuraContent : AppCompatActivity() {
         val Extra_title = "title"
         val Extra_position = "position"
     }
+
 }

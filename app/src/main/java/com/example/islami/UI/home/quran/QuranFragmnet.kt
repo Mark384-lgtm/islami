@@ -10,10 +10,10 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.islami.R
-import com.example.islami.UI.SuraVerses.SuraContent
+import com.example.islami.UI.ChapterDetails.ChapterDetailsActivity
 
 
-class QuranFragmnet() : Fragment() {
+class QuranFragmnet : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -174,9 +174,9 @@ class QuranFragmnet() : Fragment() {
 
     private fun addRvItemsClicks() {
         ref_MyAdapter.ref_ItemComponetClick = Adapter_sur.ItemComponentClick { position, title ->
-            val intent: Intent = Intent(context, SuraContent::class.java)
-            intent.putExtra(SuraContent.Extra_title, title)
-            intent.putExtra(SuraContent.Extra_position, position)
+            val intent: Intent = Intent(context, ChapterDetailsActivity::class.java)
+            intent.putExtra(ChapterDetailsActivity.Extra_title, title)
+            intent.putExtra(ChapterDetailsActivity.Extra_position, position)
             startActivity(intent)
         }
     }

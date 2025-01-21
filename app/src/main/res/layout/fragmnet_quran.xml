@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/img_fanos"
+        android:id="@+id/img_hadeth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
@@ -23,10 +23,10 @@
         android:background="?attr/colorPrimary"
         android:weightSum="2"
         app:layout_constraintBottom_toTopOf="@id/rv_sur"
-        app:layout_constraintTop_toBottomOf="@id/img_fanos">
+        app:layout_constraintTop_toBottomOf="@id/img_hadeth">
 
         <TextView
-            style="@style/tittle_sur"
+            style="@style/rv_title_items"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="5dp"
@@ -36,7 +36,7 @@
             android:text="عدد الأيات" />
 
         <TextView
-            style="@style/tittle_sur"
+            style="@style/rv_title_items"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="5dp"

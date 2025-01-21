@@ -1,4 +1,4 @@
-package com.example.islami.UI.SuraVerses
+package com.example.islami.UI.ChapterDetails
 
 import android.view.LayoutInflater
 import android.view.View
@@ -16,7 +16,7 @@ class VersesAdapter(val verses: MutableList<String>) : Adapter<VersesAdapter.ver
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): versesViewHolder {
         val inflator: LayoutInflater = LayoutInflater.from(parent.context)
         val itemView = inflator.inflate(R.layout.item_verse, parent, false)
-        return VersesAdapter.versesViewHolder(itemView)
+        return versesViewHolder(itemView)
     }
 
     override fun getItemCount(): Int = verses.size
@@ -24,6 +24,5 @@ class VersesAdapter(val verses: MutableList<String>) : Adapter<VersesAdapter.ver
     override fun onBindViewHolder(holder: versesViewHolder, position: Int) {
         holder.tv_verse.text = "${position + 1}-"
         holder.tv_verse.append(verses[position])
-
     }
 }
