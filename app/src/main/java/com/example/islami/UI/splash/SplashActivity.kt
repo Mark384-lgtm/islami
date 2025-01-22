@@ -7,14 +7,14 @@ import android.os.Looper
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import com.example.islami.UI.home.HomeActivity
 import com.example.islami.R
+import com.example.islami.UI.home.HomeActivity
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_splash)
         val iv_splashScreen: ImageView = findViewById(R.id.splashScreen)
         iv_splashScreen.setImageResource(R.drawable.group8)
 

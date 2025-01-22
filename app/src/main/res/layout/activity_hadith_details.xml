@@ -15,16 +15,18 @@
         app:elevation="0dp">
 
         <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_activityhadith"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/transparent"
             android:elevation="16dp">
 
             <TextView
+                android:id="@+id/hadith_title"
                 style="@style/toolbarTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Islami" />
+                android:text="الحديث الاول" />
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -32,5 +34,9 @@
 
     <include
         android:id="@+id/content"
-        layout="@layout/content_home" />
+        layout="@layout/content_hadith_details" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+

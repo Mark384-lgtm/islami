@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".UI.splash.SplashActivity">
+    android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/splashScreen"
+    <TextView
+        android:id="@+id/tv_tittle"
+        style="@style/rv_title_items"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="fitXY" />
-
+        android:gravity="center"
+        android:paddingVertical="8dp"
+        android:text="حديث" />
 </androidx.constraintlayout.widget.ConstraintLayout>
